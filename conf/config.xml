@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core>
+    <properties id="core">
+        <property type="STRING">
+            <name>URL</name>
+            <placeholder>The reciever url</placeholder>
+        </property>
+        <property type="OBJECT">
+            <name>LIB</name>
+            <placeholder>Witch library do you want to use ?</placeholder>
+        </property>
+    </properties>
+</core>
+<packages>
+    <properties id="form-listener">
+        <property type="STRING">
+            <name>URL</name>
+            <placeholder>The reciever url</placeholder>
+        </property>
+    </properties>
+    <properties id="dynamic-properties">
+        <property type="STRING">
+            <name>MASTER_SCRIPT</name>
+            <placeholder>The url of the php master script</placeholder>
+        </property>
+    </properties>
+</packages>
