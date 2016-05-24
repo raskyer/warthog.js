@@ -51,9 +51,21 @@ def save_output(file_name, new_content):
     f.close()
 
 
+def generating_process(root, name):
+    patterns, user_data = hydrate(root.findall('property'))
+
+    file_content = get_file(name)
+    new_content = replace(file_content, patterns, user_data)
+    save_output(name, new_content)
+
+
+def build(root):
+    generating_process(root, name);
+
+
 class Warthog(cmd.Cmd):
     intro = "Warthog console helper"
-    prompt = 'Warthog>> '
+    prompt = 'Warthog@ '
 
     def do_generate(self, arg):
         'Generate a warthog file from a package like: generate [1] [2] \n [1]: package \n [2]: language/tool'
@@ -73,15 +85,27 @@ class Warthog(cmd.Cmd):
         xml_conf = ET.parse("conf/" + path + ".xml")
         root = xml_conf.getroot()
 
-        patterns, user_data = hydrate(root.findall('property'))
+        generating_process(name);
 
-        file_content = get_file(name)
-        new_content = replace(file_content, patterns, user_data)
-        save_output(name, new_content)
+
+    def do_build(self, arg):
+        'Build the all application warthog inside an only one file like: build ([1], [2], ...) \n [1], [2]: (optional) Name of package you want to build with warthog'
+
+        if len(arg) < 1:
+            package = ask_package();
+        else:
+            package = get_package(arg);
+
+        build(package);
+        #build(core);
+        #minify()
+        #obfuscate
+        #save
 
     def do_exit(self, arg):
         'Exit the program'
         return True
+
 
 if __name__ == "__main__":
     Warthog().cmdloop()

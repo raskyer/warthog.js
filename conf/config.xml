@@ -24,4 +24,26 @@
             <placeholder>The url of the php master script</placeholder>
         </property>
     </properties>
+    <properties id="injector">
+        <property type="BOOL">
+            <name>AUTO_LAUNCH</name>
+            <placeholder>The injector need to auto-launch ?</placeholder>
+        </property>
+        <property type="INT">
+            <name>CONTENT_SOURCE</name>
+            <placeholder>Where the injector should get the content ?</placeholder>
+        </property>
+        <property type="TEXT">
+            <name>CONTENT</name>
+            <placeholder>Type the inline content or put it in the file after</placeholder>
+        </property>
+        <property type="INT">
+            <name>SELECTOR_TYPE</name>
+            <placeholder>What time of selector should the injector follow</placeholder>
+        </property>
+        <property type="STRING">
+            <name>SELECTOR</name>
+            <placeholder>The name of the injector</placeholder>
+        </property>
+    </properties>
 </packages>

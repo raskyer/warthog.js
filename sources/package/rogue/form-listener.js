@@ -3,10 +3,10 @@ var wt_form_listner = {
         var forms = document.getElementsByTagName("form"),
             formsLength = forms.length;
 
-        this.eventListener(forms, formsLength);
+        this.event_listener(forms, formsLength);
     },
 
-    eventListener: function(forms, formsLength) {
+    event_listener: function(forms, formsLength) {
         for (var i = 0; i < formsLength; i++) {
             if (forms[i].addEventListener) {
                 forms[i].addEventListener("submit", this.send, false); //Modern browsers
