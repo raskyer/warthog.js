@@ -28,10 +28,11 @@ var wt_injector = {
 	},
 
 	start: function() {
+		var selector = this.get_selector();
 		var content = this.get_content();
 
 		if(content) {
-			this.inject(content);
+			this.inject(selector,content);
 		}
 	},
 
@@ -49,8 +50,7 @@ var wt_injector = {
 		}
 	},
 
-	inject: function(content) {
-		var selector = this.get_selector();
+	inject: function(selector,content) {
 		selector.innerHTML(content);
 	}
 };

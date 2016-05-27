@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<core>
-    <properties id="core">
-        <property type="STRING">
-            <name>URL</name>
-            <placeholder>The reciever url</placeholder>
-        </property>
-        <property type="OBJECT">
-            <name>LIB</name>
-            <placeholder>Witch library do you want to use ?</placeholder>
-        </property>
-    </properties>
-</core>
-<packages>
-    <properties id="form-listener">
-        <property type="STRING">
-            <name>URL</name>
-            <placeholder>The reciever url</placeholder>
-        </property>
-    </properties>
-    <properties id="dynamic-properties">
-        <property type="STRING">
-            <name>MASTER_SCRIPT</name>
-            <placeholder>The url of the php master script</placeholder>
-        </property>
-    </properties>
-    <properties id="injector">
-        <property type="BOOL">
-            <name>AUTO_LAUNCH</name>
-            <placeholder>The injector need to auto-launch ?</placeholder>
-        </property>
-        <property type="INT">
-            <name>CONTENT_SOURCE</name>
-            <placeholder>Where the injector should get the content ?</placeholder>
-        </property>
-        <property type="TEXT">
-            <name>CONTENT</name>
-            <placeholder>Type the inline content or put it in the file after</placeholder>
-        </property>
-        <property type="INT">
-            <name>SELECTOR_TYPE</name>
-            <placeholder>What time of selector should the injector follow</placeholder>
-        </property>
-        <property type="STRING">
-            <name>SELECTOR</name>
-            <placeholder>The name of the injector</placeholder>
-        </property>
-    </properties>
-</packages>
+<warthog>
+    <core>
+        <properties id="core">
+            <type></type>
+            <property type="STRING">
+                <name>URL</name>
+                <placeholder>The reciever url</placeholder>
+            </property>
+        </properties>
+        <properties id="core_cache">
+            <type></type>
+            <property type="INT">
+                <name>SERVICE</name>
+                <placeholder>What time to service use for cache ? (default: session storage) \n 0: Session storage \n 1: Local storage</placeholder>
+                <default>0</default>
+            </property>
+        </properties>
+        <properties id="core_caller">
+            <type></type>
+        </properties>
+    </core>
+    <packages>
+        <properties id="form-listener">
+            <type>rogue</type>
+        </properties>
+        <properties id="dynamic-properties">
+            <type>utils</type>
+            <property type="STRING">
+                <name>MASTER_SCRIPT</name>
+                <placeholder>The url of the php master script</placeholder>
+            </property>
+        </properties>
+        <properties id="injector">
+            <type>utils</type>
+            <property type="BOOL">
+                <name>AUTO_LAUNCH</name>
+                <placeholder>The injector need to auto-launch ?</placeholder>
+            </property>
+            <property type="INT">
+                <name>CONTENT_SOURCE</name>
+                <placeholder>Where the injector should get the content ?</placeholder>
+            </property>
+            <property type="TEXT">
+                <name>CONTENT</name>
+                <placeholder>Type the inline content or put it in the file after</placeholder>
+            </property>
+            <property type="INT">
+                <name>SELECTOR_TYPE</name>
+                <placeholder>What time of selector should the injector follow</placeholder>
+            </property>
+            <property type="STRING">
+                <name>SELECTOR</name>
+                <placeholder>The name of the injector</placeholder>
+            </property>
+        </properties>
+    </packages>
+</warthog>

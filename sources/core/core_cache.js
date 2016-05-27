@@ -1,5 +1,5 @@
 var wt_core_cache = {
-    service: 0,
+    service: "{{ SERVICE }}",
 
     save: function(key, val) {
         if (this.service == 0) {
