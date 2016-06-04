@@ -12,7 +12,7 @@
             <type></type>
             <property type="INT">
                 <name>SERVICE</name>
-                <placeholder>What time to service use for cache ? (default: session storage) \n 0: Session storage \n 1: Local storage</placeholder>
+                <placeholder>What time to service use for cache ? (default: session storage)</placeholder>
                 <default>0</default>
             </property>
         </properties>
