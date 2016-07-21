@@ -1,0 +1,26 @@
+{
+  "name": "Warthog.js",
+  "version": "1.0.0",
+  "description": "Hacking library Warthog.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Warthog",
+    "Hacking Library",
+    "Javascript",
+    "Exploit",
+    "Backdoor"
+  ],
+  "author": "LeaklessGfy & Kamikaze.0x36",
+  "license": "MIT",
+  "bugs": {
+    "url": "/issues"
+  },
+  "homepage": "/",
+  "dependencies": {
+    "webpack": "*"
+  }
+}
