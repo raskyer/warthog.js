@@ -20,5 +20,8 @@
     "url": "/issues"
   },
   "homepage": "/",
-  "devDependencies": {}
+  "devDependencies": {},
+  "dependencies": {
+    "ts-loader": "^0.9.5"
+  }
 }
