@@ -1,15 +1,28 @@
 var webpack = require('webpack');
-var PROD = 1;
 
 module.exports = {
-  entry: './src/entry.js',
+  entry: {
+    wt: './src/start.js',
+    zos: './src/warthog.ts'
+  },
+  //devtool: 'source-map',
   output: {
     path: './dist',
-    filename: PROD ? 'bundle.min.js' : 'bundle.js'
+    filename: '[id].min.js',
+    libraryTarget: "var",
+    library: '_[name]'
   },
-  plugins: PROD ? [
+  resolve: {
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+  },
+  module: {
+    loaders: [
+      { test: /\.ts$/, loader: 'ts-loader' }
+    ]
+  },
+  plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false }
     })
-  ] : []
+  ]
 };

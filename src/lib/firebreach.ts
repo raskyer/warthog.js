@@ -4,7 +4,7 @@
  * @author LeakLessGfy
  * @param {string} url - The firebase url
  */
-var Firebreach = function(url) {
+export function Firebreach(url) {
   this._url = url;
   this._user = {
       email   : null,
@@ -12,7 +12,7 @@ var Firebreach = function(url) {
       uid     : null,
       token   : null
   };
-  this._firebase = new Firebase(this._url);
+  //this._firebase = new Firebase(this._url);
   this.auth = new FirebreachAuth(this._firebase);
 }
 
@@ -294,5 +294,3 @@ FirebreachAuth.prototype.register = function register(email, password, callback)
     password: password
   }, callback);
 }
-
-module.exports = Firebreach;

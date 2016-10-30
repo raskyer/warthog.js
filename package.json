@@ -2,7 +2,9 @@
   "name": "Warthog.js",
   "version": "1.0.0",
   "description": "Hacking library Warthog.js",
-  "scripts": {},
+  "scripts": {
+    "build": "cat dist/0.min.js > dist/bundle.min.js; cat dist/1.min.js >> dist/bundle.min.js"
+  },
   "repository": {
     "type": "git",
     "url": ""
@@ -20,7 +22,9 @@
     "url": "/issues"
   },
   "homepage": "/",
+  "devDependencies": {},
   "dependencies": {
-    "webpack": "*"
+    "webpack": "*",
+    "ts-loader": "^0.9.5"
   }
 }
