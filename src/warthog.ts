@@ -15,8 +15,6 @@ declare var _wt: any;
  * @implements {WarthogInterface}
  */
 export class Warthog implements WarthogInterface {
-	dependencies: Dependency[];
-	dependenciesLoaded: number;
 	url: string;
 	ip: string;
 
@@ -24,10 +22,8 @@ export class Warthog implements WarthogInterface {
 	 * Creates an instance of Warthog.
 	 * @memberOf Warthog
 	 */
-	constructor() {
-		this.dependencies = [];
-		this.dependenciesLoaded = 0;
-		this.url = "";
+	constructor(url?: string) {
+		this.url = url;
 	}
 
 	/**
@@ -35,32 +31,6 @@ export class Warthog implements WarthogInterface {
 	 * @memberOf Warthog
 	 */
 	init(): void {
-		this.depencyInjection();
-		this.start();
-	}
-
-	/**
-	 * Start the process of warthog
-	 * @memberOf Warthog
-	 */
-	start(): void {
-		var k = new Kaspersky(this);
-		k.init();
-
-		var f = new FormListener(this);
-		f.init();
-
-		var t = new Firebreach("ty");
-	}
-
-	/**
-	 * Init the depency injection in the page
-	 * @memberOf Warthog
-	 */
-	depencyInjection(): void {
-		for(var i = 0; i < this.dependencies.length; i++) {
-			this.injectScript(this.dependencies[i]);
-		}
 	}
 
 	/**

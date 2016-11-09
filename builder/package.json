@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Hacking library Warthog.js",
   "scripts": {
-    "build": "cat dist/0.min.js > dist/bundle.min.js; cat dist/1.min.js >> dist/bundle.min.js"
   },
   "repository": {
     "type": "git",

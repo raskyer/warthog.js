@@ -2,12 +2,12 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    wt: './src/start.js',
-    zos: './src/warthog.ts'
+    st: './../src/start.js',
+    wt: './../src/warthog.ts'
   },
   //devtool: 'source-map',
   output: {
-    path: './dist',
+    path: './../dist',
     filename: '[id].min.js',
     libraryTarget: "var",
     library: '_[name]'

