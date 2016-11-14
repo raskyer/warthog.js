@@ -2,8 +2,8 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    st: './../src/start.js',
-    wt: './../src/warthog.ts'
+    wt: './../src/warthog.ts',
+    st: './../src/start.js'
   },
   //devtool: 'source-map',
   output: {

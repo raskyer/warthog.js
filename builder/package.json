@@ -23,7 +23,8 @@
   "homepage": "/",
   "devDependencies": {},
   "dependencies": {
-    "webpack": "*",
-    "ts-loader": "^0.9.5"
+    "webpack": "1.13.*",
+    "ts-loader": "1.2.*",
+    "typescript": "2.0.*"
   }
 }
